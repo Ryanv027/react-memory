@@ -1,0 +1,15 @@
+[class*="col-"] {
+  margin-bottom: 15px;
+}
+
+.scoreboard-container {
+  background-color: rgb(244, 178, 13);
+  color: white;
+  text-align: center;
+  padding: 30px;
+  margin-bottom: 35px;
+}
+
+.gameboard-container {
+  border: 5px solid rgb(150, 149, 149);
+}
