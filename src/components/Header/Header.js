@@ -6,8 +6,11 @@ class Header extends React.Component {
     return (
       <header className="header">
         <div className="nav-container">
-          <div className="nav-1">Reset</div>
-          <div className="nav-item nav-2">Clickerz</div>
+          <ul>
+            <li>Reset</li>
+            <li>Click an image to begin</li>
+            <li>Score: 0</li>
+          </ul>
         </div>
       </header>
     );

@@ -3,13 +3,24 @@
 }
 
 .scoreboard-container {
-  background-color: rgb(244, 178, 13);
+  background-image: url("./images/connectwork.png");
   color: white;
   text-align: center;
-  padding: 30px;
+  padding: 180px 30px 30px 30px;
   margin-bottom: 35px;
+  margin-top: -14px;
+  font-family: "Slabo 27px", serif;
+  font-size: 30px;
 }
 
 .gameboard-container {
-  border: 5px solid rgb(150, 149, 149);
+  margin-bottom: 85px;
+}
+
+.picture-container {
+  border: 5px grey solid;
+}
+
+.picture-container:hover {
+  border: 5px red solid;
 }

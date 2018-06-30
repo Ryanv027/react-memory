@@ -1,26 +1,31 @@
 .header {
-  background-color: rgb(48, 201, 142);
-  position: relative;
+  background-color: rgb(94, 9, 191);
+  position: fixed;
+  top: 0;
+  width: 100%;
   text-align: center;
+  box-shadow: 0px 5px 5px black;
+  z-index: 10;
 }
 
-.nav-item {
+.nav-container li {
+  display: inline-block;
+  width: 33.3%;
+  padding: 26px 0;
+  text-align: center;
   color: white;
-  font-size: 48px;
-  font-weight: bold;
-  padding: 20px;
+  font-size: 28px;
+  font-family: "Slabo 27px", serif;
 }
 
-.nav-1 {
-  margin-right: 24%;
-  margin-left: 5%;
-  font-size: 40px;
-  transform: translateY(5px);
+.nav-container li:first-child {
   cursor: pointer;
-  border: 1px black solid;
-  top: 113%;
+}
 
-  left: 10%;
-  padding: 5px;
-  position: absolute;
+.nav-container li:first-child:hover {
+  transform: scale(1.1);
+}
+
+.nav-container ul {
+  margin: 0;
 }

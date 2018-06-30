@@ -41,7 +41,7 @@ class Game extends React.Component {
   render() {
     const board = this.state.pictures.map(meme => {
       return (
-        <div className="col-3" key={Math.random()}>
+        <div className="col-3 picture-container" key={Math.random()}>
           <GameBoard
             key={meme.id}
             id={meme.id}
@@ -53,11 +53,11 @@ class Game extends React.Component {
     });
 
     return (
-      <div className="container">
+      <div>
         <div className="scoreboard-container">
           <Scoreboard score={this.state.score} />
         </div>
-        <div className="gameboard-container">
+        <div className="gameboard-container container">
           <div className="row justify-content-between">{board}</div>
         </div>
       </div>
