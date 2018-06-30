@@ -1,4 +1,6 @@
 import React from "react";
+import _ from "lodash";
+
 import "./Game.css";
 import Scoreboard from "./../Scoreboard/Scoreboard";
 import GameBoard from "./../GameBoard/GameBoard";
@@ -18,7 +20,6 @@ import image12 from "./images/image12.jpg";
 
 class Game extends React.Component {
   state = {
-    score: 0,
     pictures: [
       { id: 1, src: image1 },
       { id: 2, src: image2 },
@@ -35,8 +36,27 @@ class Game extends React.Component {
     ],
     clicked: []
   };
-  updateScore = () => {};
-  updateClicked = () => {};
+  updateClicked = id => {
+    console.log("updateClicked called");
+    if (this.state.clicked.indexOf(id) === -1) {
+      console.log("first if");
+      const clicked = [...this.state.clicked, id];
+      this.setState({ clicked: clicked });
+      this.props.updateScore("add");
+      this.shuffle();
+    } else {
+      console.log("second if ");
+      this.setState({ clicked: [] });
+      this.shuffle();
+      this.props.updateScore("reset");
+    }
+  };
+
+  shuffle = () => {
+    const array = this.state.pictures;
+    const pictures = _.shuffle(array);
+    this.setState({ pictures });
+  };
 
   render() {
     const board = this.state.pictures.map(meme => {
@@ -46,7 +66,7 @@ class Game extends React.Component {
             key={meme.id}
             id={meme.id}
             src={meme.src}
-            updateClicked={this.updateClicked}
+            onClick={() => this.updateClicked(meme.id)}
           />
         </div>
       );
