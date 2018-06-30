@@ -7,7 +7,7 @@ class Header extends React.Component {
       <header className="header">
         <div className="nav-container">
           <ul>
-            <li>Reset</li>
+            <li className="reset">Reset</li>
             <li>Click an image to begin</li>
             <li>Score: 0</li>
           </ul>

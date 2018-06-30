@@ -19,13 +19,17 @@
   letter-spacing: 4px;
 }
 
-.nav-container li:first-child {
+.nav-container li:nth-child(1) {
   cursor: pointer;
   width: 30%;
 }
 
-.nav-container li:first-child:hover {
+.nav-container li:nth-child(1):hover {
   transform: scale(1.1);
+}
+
+.nav-container li:nth-child(1):active {
+  transform: scale(1);
 }
 
 .nav-container ul {
