@@ -10,7 +10,11 @@ class App extends Component {
   updateScore = score => {
     console.log("update score hit", score);
     if (score === "add") {
-      const score = this.state.score + 1;
+      let score = this.state.score + 1;
+      if (score === 12) {
+        alert("You win!");
+        score = 0;
+      }
       this.setState({ score });
     } else {
       this.setState({ score: 0 });
