@@ -16,10 +16,12 @@
   color: white;
   font-size: 28px;
   font-family: "Slabo 27px", serif;
+  letter-spacing: 4px;
 }
 
 .nav-container li:first-child {
   cursor: pointer;
+  width: 30%;
 }
 
 .nav-container li:first-child:hover {
